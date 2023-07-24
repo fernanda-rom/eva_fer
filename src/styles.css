@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+*
+body {
+  background-color: #82cec8; 
+  background-size: cover;
+  margin: 40px;
+}
+
+.app {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Staatliches', cursive;
+  font-size: 40px;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.note {
+  -webkit-box-reflect: below  1px linear-gradient(transparent);
+  transform-origin: center;
+  background-color: #ffdeb8; 
+  background-size: cover;
+  box-shadow: 10px 8px 10px 2px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  transform: perspective(800px) rotateY(12deg);
+  transition: 0.1s;
+  max-width: 350px;
+  margin-top: 30px;
+  border-radius: 2%;
+}
+
+.note:hover{
+  transform: scale(1.35);
+  opacity: 1;
+}
+
+
+.note.important {
+  -webkit-box-reflect: below 7px linear-gradient(transparent);
+  transform-origin: center;
+  background-color: #ff6a6a; 
+  background-size: cover;
+  box-shadow: 10px 8px 10px 2px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  transform: perspective(800px) rotateY(12deg);
+  transition: 0.1s;
+  max-width: 350px;
+  margin-top: 30px;
+  border-radius: 2%;
+}
+.note.note.important:hover {
+
+  transform: scale(1.35);
+  opacity: 1;
+}
+
+h3 {
+  margin-top: 0;
+  color: #122402;
+  font-family: 'Staatliches', cursive;
+  font-size: 30px;
+  
+}
+h1 {
+  color: #9c0859;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #f11f93;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+
+.btn-primary:hover {
+  background-color: #ff6a6a;
+}
+
+.error-message {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.form-label {
+  font-size: xx-large;
+  color: rgb(238, 37, 178);
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+}
